@@ -49,8 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Components.cs" />
+    <Compile Include="Core\GoertzelSampler.cs" />
+    <Compile Include="Core\ISampler.cs" />
     <Compile Include="Core\Player.cs" />
-    <Compile Include="Core\Sampler.cs" />
+    <Compile Include="Core\NaiveSampler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,6 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Samples\Mortal Kombat.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Test.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Samples\Tetris.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

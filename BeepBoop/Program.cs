@@ -1,4 +1,5 @@
-﻿using BeepBoop.Core;
+﻿using System;
+using BeepBoop.Core;
 
 namespace BeepBoop
 {
@@ -6,11 +7,19 @@ namespace BeepBoop
     {
         public static void Main(string[] args)
         {
-            var sampler = new Sampler(@"Samples\Mortal Kombat.mp3");
+            var sampler = new GoertzelSampler();
 
-            var song = sampler.Sample();
+            Play(sampler, @"Samples\Test.mp3");
+        }
+
+        private static void Play(ISampler sampler, string fileName)
+        {
+            Console.WriteLine("Sampling...");
+            var song = sampler.Sample(fileName);
 
             var player = new Player();
+
+            Console.WriteLine("Playing...");
 
             player.Play(song);
         }

@@ -12,10 +12,12 @@ namespace BeepBoop.Core
             {
                 if (songComponent.component == Components.Pause)
                 {
+                    Console.WriteLine($"Pause {songComponent.duration}");
                     Thread.Sleep(songComponent.duration);
                 }
                 else
                 {
+                    Console.WriteLine($"Beep {songComponent.freq} {songComponent.duration}");
                     Console.Beep(songComponent.freq, songComponent.duration);
                 }
             }
